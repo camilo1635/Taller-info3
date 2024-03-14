@@ -1,0 +1,50 @@
+Taller
+
+Objetivo: abstraer los atributos, constructores y métodos que deben constituir una clase para la solución a un requisito. 
+Debe utilizar las siguientes temáticas vistas: creación de un proyecto maven, implementación de una clase, creación de 
+un objeto, constructores, enumeraciones, listas para almacenar objetos, separación del modelo de la vista, captura de 
+datos por consola, impresión de datos por consola, validación de datos, construcción e interpretación de un diagrama 
+de clases.
+Se desea desarrollar una aplicación para Avianca que permita calcular el valor a pagar por el peso en kg de las maletas 
+de un cliente. Los clientes al viajar pueden llevar varias maletas. El sobrecosto de la maleta depende del tipo de cliente 
+platino ‘p’, oro ‘o’ o diamante ‘d’. Si el cliente es platino el sobrecosto del equipaje es 15%, si es oro el sobrecosto es 
+10% y si es diamante el sobrecosto es 5%.
+Reglas de negocio 
+ El peso total es igual al peso de todas las maletas.
+ El valor por kg de peso es $20.000
+ El valor a pagar parcial es igual a la suma de los kg de todas las maletas por el valor del kg.
+ El valor a pagar del sobrecosto es igual al porcentaje de sobrecosto según el tipo de cliente por el valor parcial.
+Etapa de análisis: Requisitos del administrador 
+ Registrar cliente.
+ Registrar los pesos de cada una de sus maletas.
+ Generar factura.
+Etapa de diseño: Diagrama de clases básico 
+Es obligatorio implementar los paquetes, clases, atributos, métodos y enumeraciones planteados en el siguiente 
+diagrama de clases.
+ 
+
+Etapa de desarrollo 
+Captura de los datos 
+Los datos del Cliente deben ser capturados mediante un objeto de la clase Scanner. Se debe capturar el nombre del 
+cliente, origen del viaje y tipo de cliente.
+La selección del tipo de cliente debe realizarse con un switch.
+El ingreso de los datos al objeto de tipo Cliente debe ser mediante un constructor parametrizado.
+ 
+El ingreso de los pesos de las maletas del cliente realizarse mediante el ciclo do while. Al final del ciclo do while se 
+debe preguntar si se desea ingresar otra maleta.
+ 
+Vista del cliente 
+La vista debe ser independiente de las clases del modelo. En la clase main considere crear un método para imprimir el 
+cliente y un método para imprimir los datos complementarios como peso total, valor parcial a pagar, sobrecosto y 
+valor total.
+La factura generada debe mostrar los siguientes datos:
+==Factura del cliente==
+Nombre cliente: Juan Perez
+Origen viaje: Cali
+Tipo de cliente: Oro
+Maleta 1 Maleta 2 Maleta 3
+7 KG 10 KG 5 KG 
+Peso total: 19 KG
+Valor parcial a pagar: $220.000
+Valor sobrecosto: $22.000
+Valor total: $242.000
